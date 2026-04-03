@@ -1,29 +1,63 @@
 import React from "react";
 
 const Trusted = () => {
+  const logos = [
+    "src/assets/TrustImage/logo1.svg",
+    "src/assets/TrustImage/logo2.svg",
+    "src/assets/TrustImage/logo3.svg",
+ "src/assets/TrustImage/logo4.svg",
+    "src/assets/TrustImage/logo5.svg",
+    "src/assets/TrustImage/logo6.svg",
+    "src/assets/TrustImage/logo7.svg",
+    "src/assets/TrustImage/logo8.svg",
+    "src/assets/TrustImage/logo9.svg",
+  ];
+
   return (
-    <div className="w-full py-16 px-10 bg-gray-50">
+    <div className="w-full py-16 px-10 bg-gray-50 overflow-hidden">
       
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto flex items-center gap-10">
         
-        {/* Heading */}
-        <p className="text-sm text-gray-500 tracking-widest uppercase mb-10">
-          Trusted by leading brands and startups
-        </p>
+        {/* LEFT TEXT */}
+        <div className="min-w-[280px]">
+          <p className="text-sm text-gray-500 tracking-widest uppercase">
+            Trusted by leading <br /> brands and startups
+          </p>
+        </div>
 
-        {/* Logos Row */}
-        <div className="flex items-center justify-between flex-wrap gap-8 opacity-70">
-
-          <img src="/logos/logo1.png" alt="brand" className="h-6 object-contain grayscale hover:grayscale-0 transition" />
-          <img src="/logos/logo2.png" alt="brand" className="h-6 object-contain grayscale hover:grayscale-0 transition" />
-          <img src="/logos/logo3.png" alt="brand" className="h-6 object-contain grayscale hover:grayscale-0 transition" />
-          <img src="/logos/logo4.png" alt="brand" className="h-6 object-contain grayscale hover:grayscale-0 transition" />
-          <img src="/logos/logo5.png" alt="brand" className="h-6 object-contain grayscale hover:grayscale-0 transition" />
-          <img src="/logos/logo6.png" alt="brand" className="h-6 object-contain grayscale hover:grayscale-0 transition" />
+        {/* RIGHT SLIDER */}
+        <div className="relative w-full overflow-hidden">
+          
+          <div
+            className="flex w-max gap-12 items-center"
+            style={{
+              animation: "scroll 20s linear infinite",
+            }}
+          >
+            {[...logos, ...logos].map((logo, i) => (
+              <img
+                key={i}
+                src={logo}
+                alt="brand"
+                className="h-6 object-contain grayscale hover:grayscale-0 transition"
+              />
+            ))}
+          </div>
 
         </div>
 
       </div>
+
+      {/* INLINE KEYFRAMES */}
+      <style>
+        {`
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+        `}
+      </style>
+
     </div>
   );
 };
