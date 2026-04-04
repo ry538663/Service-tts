@@ -1,16 +1,27 @@
 import React from "react";
 
+// IMPORT ALL IMAGES
+import logo1 from "../assets/TrustImage/logo1.svg";
+import logo2 from "../assets/TrustImage/logo2.svg";
+import logo3 from "../assets/TrustImage/logo3.svg";
+import logo4 from "../assets/TrustImage/logo4.svg";
+import logo5 from "../assets/TrustImage/logo5.svg";
+import logo6 from "../assets/TrustImage/logo6.svg";
+import logo7 from "../assets/TrustImage/logo7.svg";
+import logo8 from "../assets/TrustImage/logo8.svg";
+import logo9 from "../assets/TrustImage/logo9.svg";
+
 const Trusted = () => {
   const logos = [
-    "src/assets/TrustImage/logo1.svg",
-    "src/assets/TrustImage/logo2.svg",
-    "src/assets/TrustImage/logo3.svg",
- "src/assets/TrustImage/logo4.svg",
-    "src/assets/TrustImage/logo5.svg",
-    "src/assets/TrustImage/logo6.svg",
-    "src/assets/TrustImage/logo7.svg",
-    "src/assets/TrustImage/logo8.svg",
-    "src/assets/TrustImage/logo9.svg",
+    logo1,
+    logo2,
+    logo3,
+    logo4,
+    logo5,
+    logo6,
+    logo7,
+    logo8,
+    logo9,
   ];
 
   return (
@@ -48,7 +59,7 @@ const Trusted = () => {
 
       </div>
 
-      {/* INLINE KEYFRAMES */}
+      {/* ANIMATION */}
       <style>
         {`
           @keyframes scroll {
