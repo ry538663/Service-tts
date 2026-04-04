@@ -9,7 +9,7 @@ import img5 from "../assets/hero5.png";
 
 const Hero = () => {
     return (
-        <div className="w-ful min-h-[600px] flex items-center px-10">
+        <div className="w-ful min-h-[600px] flex items-center  px-10">
 
             {/* container with controlled gap */}
             <div className="w-full max-w-7xl mx-auto flex items-center gap-12">
