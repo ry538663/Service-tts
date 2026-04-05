@@ -7,6 +7,7 @@ import Steps from "./components/Steps"
 import Collaboration from "./components/Collaboration"
 import Rating from "./components/Rating"
 import Faq from "./components/Faq"
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
       <Collaboration />
       <Rating />
       <Faq />
+      <Footer />
     </>
   )
 }
