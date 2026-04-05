@@ -18,7 +18,7 @@ const services = [
     {
         id: 1,
         title: "Full Stack Development",
-        desc: "End-to-end development solutions from frontend to backend deployment.",
+        desc: "Complete web solutions from frontend to backend, built for performance and scalability.",
         icon: FullStack,
 
     },

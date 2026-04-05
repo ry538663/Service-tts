@@ -21,16 +21,14 @@ const Hero = () => {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                     className="max-w-xl"
                 >
-                    <p className="text-gray-400 mb-4">Powered by AI Technology</p>
+                    <p className="text-gray-400 mb-4">Powered by AI & Modern Technology</p>
 
                     <h1 className="text-5xl font-semibold text-gray-900 leading-tight">
-                        Turn Your Ideas Into Reality — With Expert Developers
+                       Transform Your Ideas Into Scalable Digital Solutions
                     </h1>
 
                     <p className="text-gray-500 mt-5">
-                        We help businesses build websites, apps, and custom tech solutions.
-                        Hire skilled developers or let us handle your complete project —
-                        fast, scalable, and reliable.
+                       We help startups and businesses build high-performance websites, mobile apps, and intelligent systems. Hire expert developers or let us manage your entire project — fast, reliable, and future-ready.
                     </p>
 
                     <button className="mt-6 px-6 py-3 rounded-full bg-indigo-500 text-white font-medium shadow-md hover:shadow-lg transition">

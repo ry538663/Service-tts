@@ -90,8 +90,7 @@ export default function HiringSteps() {
               Talk to One of Our Industry Experts
             </h3>
             <p className="text-gray-600">
-              An expert on our team will work with you to understand your goals,
-              technical needs, and team dynamics.
+              Connect with our team to discuss your goals, requirements, and project vision.
             </p>
           </div>
         </div>
@@ -107,8 +106,7 @@ export default function HiringSteps() {
               Work With Hand-Selected Talent
             </h3>
             <p className="text-gray-600">
-              Within days, we'll introduce you to the right talent for your
-              project. Average time to match is under 24 hours.
+              We connect you with skilled professionals perfectly suited to your needs.
             </p>
           </div>
         </div>

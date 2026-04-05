@@ -4,6 +4,9 @@ import Trusted from "./components/Trusted"
 import Team from "./components/Team"
 import Services from "./components/Services"
 import Steps from "./components/Steps"
+import Collaboration from "./components/Collaboration"
+import Rating from "./components/Rating"
+import Faq from "./components/Faq"
 
 function App() {
 
@@ -15,6 +18,9 @@ function App() {
       <Team />
       <Services />
       <Steps />
+      <Collaboration />
+      <Rating />
+      <Faq />
     </>
   )
 }
