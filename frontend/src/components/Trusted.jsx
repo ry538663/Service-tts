@@ -1,6 +1,5 @@
 import React from "react";
 
-// IMPORT ALL IMAGES
 import logo1 from "../assets/TrustImage/logo1.svg";
 import logo2 from "../assets/TrustImage/logo2.svg";
 import logo3 from "../assets/TrustImage/logo3.svg";
@@ -25,14 +24,15 @@ const Trusted = () => {
   ];
 
   return (
-    <div className="w-full py-16 px-10 bg-gray-50 overflow-hidden">
+    <div className="w-full my-15 py-12 md:py-16 px-4 sm:px-6 lg:px-10 bg-gray-50 overflow-hidden">
       
-      <div className="max-w-7xl mx-auto flex items-center gap-10">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-10">
         
         {/* LEFT TEXT */}
-        <div className="min-w-[280px]">
-          <p className="text-sm text-gray-500 tracking-widest uppercase">
-            Trusted by leading <br /> brands and startups
+        <div className="min-w-0 md:min-w-[280px] text-center md:text-left">
+          <p className="text-xs sm:text-sm text-gray-500 tracking-widest uppercase leading-relaxed">
+            Trusted by leading <br className="hidden md:block" />
+            brands and startups
           </p>
         </div>
 
@@ -40,7 +40,7 @@ const Trusted = () => {
         <div className="relative w-full overflow-hidden">
           
           <div
-            className="flex w-max gap-12 items-center"
+            className="flex w-max gap-8 sm:gap-10 md:gap-12 items-center"
             style={{
               animation: "scroll 20s linear infinite",
             }}
@@ -50,7 +50,7 @@ const Trusted = () => {
                 key={i}
                 src={logo}
                 alt="brand"
-                className="h-6 object-contain grayscale hover:grayscale-0 transition"
+                className="h-5 sm:h-6 md:h-6 object-contain grayscale hover:grayscale-0 transition"
               />
             ))}
           </div>
