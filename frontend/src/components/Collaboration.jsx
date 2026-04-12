@@ -1,7 +1,7 @@
 import React from "react";
 
 // import logos
-import TTS from "../assets/Collaboration/TTS.png";
+import TTS from "../assets/Collaboration/TTS1.png";
 import motorola from "../assets/Collaboration/motorola.png";
 import salesforce from "../assets/Collaboration/salesforce.png";
 import microsoft from "../assets/Collaboration/microsoft.png";

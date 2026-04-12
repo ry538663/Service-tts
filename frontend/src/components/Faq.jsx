@@ -1,25 +1,26 @@
 import React, { useState, useRef } from "react";
+import { FaChevronDown } from "react-icons/fa";
 
 const faqs = [
   {
-    question: "What services do you offer?",
+    question: "What services do you provide?",
     answer:
-      "We provide top-tier talent across software development, design, and project management tailored to your business needs.",
+      "We offer end-to-end digital solutions including web development, mobile app development, AI/ML, UI/UX design, and more. You can share your project idea, and we’ll handle everything from planning to final delivery.",
   },
   {
-    question: "How quickly can I hire talent?",
+    question: "How does the project process work?",
     answer:
-      "You can typically hire within a few days. We match you with the best candidates based on your requirements.",
+      "Simply share your requirements with us. Our team analyzes your needs, plans the project, and executes it step-by-step. We keep you updated throughout the process until the final delivery.",
   },
   {
-    question: "What makes your platform different?",
+    question: "How long does it take to complete a project?",
     answer:
-      "We focus on quality, vetting top 3% of talent globally to ensure high performance and reliability.",
+      "Project timelines depend on the complexity and scope. Small projects may take a few days, while larger solutions can take a few weeks. We always ensure timely delivery without compromising quality.",
   },
   {
-    question: "Do you offer flexible engagement models?",
+    question: "Do you provide support after project delivery?",
     answer:
-      "Yes, we offer hourly, part-time, and full-time engagement models based on your needs.",
+      "Yes, we provide ongoing support and maintenance after delivery to ensure everything runs smoothly and any updates or improvements are handled efficiently.",
   },
 ];
 
@@ -50,9 +51,8 @@ export default function FAQSection() {
             return (
               <div
                 key={index}
-                className={`border rounded-lg bg-white transition-all duration-500 shadow-sm hover:shadow-md ${
-                  isActive ? "ring-2 ring-green-500" : ""
-                }`}
+                className={`border rounded-lg bg-white transition-all duration-500 shadow-sm hover:shadow-md ${isActive ? "ring-2 ring-green-500" : ""
+                  }`}
               >
                 {/* Question */}
                 <button
@@ -63,20 +63,16 @@ export default function FAQSection() {
                     {faq.question}
                   </span>
 
-                  <span
-                    className={`text-xl transform transition-transform duration-500 ease-in-out ${
-                      isActive ? "rotate-180 text-green-500" : "text-gray-400"
-                    }`}
-                  >
-                    ▼
-                  </span>
+                  <FaChevronDown
+                    className={`text-lg transition-transform duration-500 ${isActive ? "rotate-180 text-green-500" : "text-gray-400"
+                      }`}
+                  />
                 </button>
 
                 {/* Answer */}
                 <div
-                  className={`grid transition-all duration-500 ease-in-out ${
-                    isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-                  }`}
+                  className={`grid transition-all duration-500 ease-in-out ${isActive ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                    }`}
                 >
                   <div className="overflow-hidden">
                     <div className="px-5 pb-5">

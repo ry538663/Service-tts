@@ -16,7 +16,7 @@ export default function HiringSteps() {
   return (
     <div className="w-full py-20 bg-white text-center">
 
-      <h1 className="text-4xl font-semibold mb-16">Hiring Made Easy</h1>
+      <h1 className="text-4xl font-semibold mb-16">How It Works</h1>
 
       {/* ================= DESKTOP ================= */}
       <div className="hidden md:block">

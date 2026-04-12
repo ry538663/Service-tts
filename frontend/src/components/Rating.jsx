@@ -1,4 +1,8 @@
 import React from "react";
+import logo1 from "../assets/RatingImage/logo1.svg";
+import logo2 from "../assets/RatingImage/logo2.svg";
+import logo3 from "../assets/RatingImage/logo3.svg";
+
 
 export default function ClientSatisfaction() {
   return (
@@ -30,7 +34,7 @@ export default function ClientSatisfaction() {
 
         {/* Rating */}
         <p className="text-gray-600 text-sm mb-10">
-          Clients rate Toptal {" "}
+          Clients rate TTS {" "}
           <span className="text-yellow-400">★★★★★</span> 4.9 out of 5 on average
           based on 4,000+ reviews.
         </p>
@@ -41,19 +45,17 @@ export default function ClientSatisfaction() {
           <div className="bg-white shadow-sm border rounded-md p-6">
             <p className="text-blue-500 text-2xl mb-2">“</p>
             <p className="text-gray-600 text-sm leading-relaxed">
-              I have been working with Toptal. I have been working with Toptal
-              engineers for several years now. They have consistently taken very
-              professional, highly productive, great team players, good
-              communicators, and willing to go above and beyond.
+              We’ve been working with TriUnity Tech for quite some time now, and the experience has been outstanding. Their developers consistently deliver high-quality work, communicate effectively, and integrate seamlessly with our team.
             </p>
             <p className="text-yellow-400 mt-4">★★★★★</p>
 
             <div className="mt-6">
-              <p className="font-semibold text-sm">Ian Sisk-Rees</p>
-              <p className="text-gray-500 text-xs mb-2">Co-Founder</p>
-              <div className="bg-gray-200 h-6 w-20 flex items-center justify-center text-xs">
-                LOGO
-              </div>
+              <p className="font-semibold text-sm">Rohit Singh</p>
+              <p className="text-gray-500 text-xs mb-2">Project Manager</p>
+              <img
+                src={logo1}
+                alt="company logo"
+                className="h-6 w-20 object-contain"/>
             </div>
           </div>
 
@@ -61,20 +63,19 @@ export default function ClientSatisfaction() {
           <div className="bg-white shadow-sm border rounded-md p-6">
             <p className="text-blue-500 text-2xl mb-2">“</p>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Toptal is my go-to source. Toptal is my go-to source to find highly
-              vetted talent with strong expertise and the ability to quickly
-              ramp up.
-            </p>
+              TriUnity Tech understood our requirements clearly and delivered a complete solution exactly as promised. Their ability to execute quickly and efficiently, combined with strong communication and technical expertise, truly impressed us.            </p>
             <p className="text-yellow-400 mt-4">★★★★★</p>
 
             <div className="mt-6">
-              <p className="font-semibold text-sm">Trent Capetta</p>
+              <p className="font-semibold text-sm">Simran Kaur</p>
               <p className="text-gray-500 text-xs mb-2">
-                Co-Founder & CTO
+                Entrepreneur
               </p>
-              <div className="bg-gray-200 h-6 w-20 flex items-center justify-center text-xs">
-                LOGO
-              </div>
+              <img
+                src={logo2}
+                alt="company logo"
+                className="h-6 w-20 object-contain"
+              />
             </div>
           </div>
 
@@ -82,19 +83,18 @@ export default function ClientSatisfaction() {
           <div className="bg-white shadow-sm border rounded-md p-6">
             <p className="text-blue-500 text-2xl mb-2">“</p>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Creating an app for the game with the pressure on and tight
-              deadlines was made possible with Toptal.
-            </p>
+              Working with TriUnity Tech was effortless. We shared our idea, and they turned it into a fully functional product with great attention to detail and a strong focus on quality, ensuring everything was delivered exactly as expected.     </p>
             <p className="text-yellow-400 mt-4">★★★★★</p>
 
             <div className="mt-6">
-              <p className="font-semibold text-sm">Conor Kearney</p>
+              <p className="font-semibold text-sm">Vikas Jain</p>
               <p className="text-gray-500 text-xs mb-2">
-                Director of Operations
+                Operations Head
               </p>
-              <div className="bg-gray-200 h-6 w-20 flex items-center justify-center text-xs">
-                LOGO
-              </div>
+              <img
+                src={logo3}
+                alt="company logo"
+                className="h-6 w-20 object-contain"/>
             </div>
           </div>
         </div>

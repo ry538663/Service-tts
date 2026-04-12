@@ -10,7 +10,8 @@ import img3 from "../assets/TeamIcons/download (2).jpeg";
 
 const Team = () => {
     const [activeSlide, setActiveSlide] = useState(0);
-
+    const [touchStart, setTouchStart] = useState(0);
+    const [touchEnd, setTouchEnd] = useState(0);
     return (
         <div className="w-full py-10 px-6 md:px-10 lg:px-10 overflow-x-hidden">
 
@@ -31,29 +32,23 @@ const Team = () => {
                 {/* SLIDER CONTAINER */}
                 <div className="overflow-hidden lg:overflow-visible">
 
-                    <Motion.div
-                        className="flex lg:flex-row w-full"
+                    <div
+                        className="flex lg:flex-row w-full transition-transform duration-300 ease-out"
 
-                        animate={{ x: `-${activeSlide * 100}%` }}
+                        style={{ transform: `translateX(-${activeSlide * 100}%)` }}
 
-                        transition={{
-                            type: "spring",
-                            stiffness: 90,
-                            damping: 20,
-                            mass: 0.8
-                        }}
+                        onTouchStart={(e) => setTouchStart(e.targetTouches[0].clientX)}
 
-                        drag="x"
-                        dragConstraints={{ left: -1000, right: 1000 }} // allow free drag
-                        dragElastic={0.2}
+                        onTouchMove={(e) => setTouchEnd(e.targetTouches[0].clientX)}
 
-                        onDragEnd={(e, info) => {
-                            const swipePower = Math.abs(info.velocity.x) * info.offset.x;
+                        onTouchEnd={() => {
+                            const distance = touchStart - touchEnd;
+                            const threshold = 80;
 
-                            if (swipePower < -5000 && activeSlide < 1) {
-                                setActiveSlide(activeSlide + 1);
-                            } else if (swipePower > 5000 && activeSlide > 0) {
-                                setActiveSlide(activeSlide - 1);
+                            if (distance > threshold && activeSlide < 1) {
+                                setActiveSlide(1);
+                            } else if (distance < -threshold && activeSlide > 0) {
+                                setActiveSlide(0);
                             }
                         }}
                     >
@@ -176,7 +171,7 @@ const Team = () => {
 
                         </div>
 
-                    </Motion.div>
+                    </div>
                 </div>
             </div>
 

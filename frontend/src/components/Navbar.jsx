@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { motion as Motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import logo from "../assets/hero.png";
+import logo from "../assets/TTS1.png";
+ 
 import { AnimatePresence } from "framer-motion";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,7 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex items-center gap-2 text-lg font-semibold tracking-tight">
-            <img src={logo} alt="logo" className="h-8 w-auto object-contain" />
+            <img src={logo} alt="logo" className="h-12 w-auto object-contain" />
           </div>
 
           {/* Desktop Menu */}
