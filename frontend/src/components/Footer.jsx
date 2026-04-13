@@ -25,11 +25,11 @@ const Footer = () => {
 
         {/* Quick Links */}
         <div>
-          <h3 className="font-semibold mb-4 ml-10 border-b border-white/20 pb-2 w-fit">
+          <h3 className="font-semibold mb-4 md:ml-10 ml-0 border-b border-white/20 pb-2 w-fit">
             Quick Links
           </h3>
 
-          <ul className="space-y-2 ml-10 text-sm text-white/80">
+          <ul className="space-y-2 md:ml-10 ml-0  text-sm text-white/80">
             {[
               "Home Page",
               "Services Page",

@@ -32,7 +32,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="bg-gray-50 py-16 px-4">
+    <section className="bg-white py-16 px-4 mb-10">
       <div className="max-w-4xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-10">
