@@ -1,30 +1,21 @@
-import Hero from "./components/Hero"
-import Navbar from "./components/Navbar"
-import Trusted from "./components/Trusted"
-import Team from "./components/Team"
-import Services from "./components/Services"
-import Steps from "./components/Steps"
-import Collaboration from "./components/Collaboration"
-import Rating from "./components/Rating"
-import Faq from "./components/Faq"
-import Footer from "./components/Footer"
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
 
 function App() {
-
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Trusted />
-      <Team />
-      <Services />
-      <Steps />
-      <Collaboration />
-      <Rating />
-      <Faq />
-      <Footer />
-    </>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/* <Route path="/services" element={} /> */}
+        <Route path="/contact" element={<Contact/>} />
+        {/* <Route path="/careers" element={<div>Careers Page</div>} /> */}
+        {/* <Route path="/about" element={<div>About Page</div>} /> */}
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
