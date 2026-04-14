@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Servicespage from "./pages/Servicespage"; // Import the Services page
+import ServiceDetail from "./pages/ServiceDetailPage";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/services" element={<Servicespage />} />
+          <Route path="/service/:slug" element={<ServiceDetail/>} />
            {/* Add this line */}
         </Routes>
       </BrowserRouter>

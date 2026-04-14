@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion as Motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../assets/TTS1.png";
 import { AnimatePresence } from "framer-motion";
 
@@ -34,38 +34,46 @@ const Navbar = () => {
           transition-all duration-300">
 
           {/* Logo → Home */}
-          <Link to="/" className="flex items-center gap-2">
+          <NavLink to="/" className="flex items-center gap-2">
             <img src={logo} alt="logo" className="h-12 w-auto object-contain" />
-          </Link>
+          </NavLink>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8 text-gray-600 font-medium">
             {navItems.map((item) => (
-              <Link key={item.name} to={item.path} className="relative group">
-                <span className="group-hover:text-black transition duration-200">
-                  {item.name}
-                </span>
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-black transition-all duration-300 group-hover:w-full"></span>
-              </Link>
+              <NavLink key={item.name} to={item.path} className="relative group">
+                {({ isActive }) => (
+                  <>
+                    <span className="group-hover:text-black transition duration-200">
+                      {item.name}
+                    </span>
+
+                    <span
+                      className={`absolute left-0 -bottom-1 h-0.5 bg-black transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                        }`}
+                    ></span>
+                  </>
+                )}
+              </NavLink>
             ))}
           </div>
 
           {/* Desktop Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Link to="/signin">
+            <NavLink to="/signin">
               <button className="bg-orange-500 cursor-pointer text-white px-5 py-2.5 rounded-xl font-medium 
                 shadow-[0_6px_15px_rgba(249,115,22,0.3)]
                 active:scale-95 transition-all duration-200">
                 Sign In
               </button>
-            </Link>
+            </NavLink>
 
-            <Link to="/signup">
+            <NavLink to="/signup">
               <button className="px-5 cursor-pointer bg-green-500 py-2.5 text-white rounded-xl font-medium border border-gray-300 
                 active:scale-95 transition-all duration-200">
                 Sign Up
               </button>
-            </Link>
+            </NavLink>
           </div>
 
           {/* Mobile Toggle */}
@@ -92,13 +100,13 @@ const Navbar = () => {
             >
               <div className="flex flex-col gap-4 text-gray-600 font-medium">
                 {navItems.map((item) => (
-                  <Link
+                  <NavLink
                     key={item.name}
                     to={item.path}
                     onClick={() => setIsOpen(false)} // ✅ close menu
                   >
                     {item.name}
-                  </Link>
+                  </NavLink>
                 ))}
               </div>
 

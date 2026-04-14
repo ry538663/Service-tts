@@ -58,7 +58,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-gray-500 mt-4 text-sm sm:text-base md:text-lg">
-            We help businesses build websites, apps, and custom solutions. Share your project with us and we’ll handle everything from start to finish — delivering fast, scalable, and reliable results without the hassle.
+            We help businesses build websites, apps, and custom solutions. Share your project with us and we’ll handle everything from start to finish - delivering fast, scalable, and reliable results without the hassle.
           </p>
 
           <button className="mt-6 px-6 py-3 rounded-full bg-indigo-500 text-white font-medium shadow-md hover:shadow-lg transition w-full sm:w-auto">

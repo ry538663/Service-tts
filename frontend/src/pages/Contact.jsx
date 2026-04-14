@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import { motion as Motion } from "framer-motion";
@@ -8,6 +8,9 @@ import { db } from "../firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 const Contact = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -133,8 +136,8 @@ const Contact = () => {
                                     type="submit"
                                     disabled={status === "sending"}
                                     className={`w-full py-4 rounded-2xl font-bold text-white shadow-lg transition-all active:scale-95 ${status === "success"
-                                            ? "bg-green-600 shadow-green-200"
-                                            : "bg-green-500 shadow-green-200 hover:shadow-green-300"
+                                        ? "bg-green-600 shadow-green-200"
+                                        : "bg-green-500 shadow-green-200 hover:shadow-green-300"
                                         }`}
                                 >
                                     {status === "sending" ? "Sending..." : status === "success" ? "Message Sent!" : "Send Message"}
