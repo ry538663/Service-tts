@@ -103,7 +103,10 @@ const Navbar = () => {
                   <NavLink
                     key={item.name}
                     to={item.path}
-                    onClick={() => setIsOpen(false)} // ✅ close menu
+                    onClick={() => setIsOpen(false)}
+                    className={({ isActive }) =>
+                      isActive ? "text-black font-semibold" : ""
+                    }
                   >
                     {item.name}
                   </NavLink>
@@ -111,17 +114,17 @@ const Navbar = () => {
               </div>
 
               <div className="flex flex-col gap-3 mt-4">
-                <Link to="/signin" onClick={() => setIsOpen(false)}>
+                <NavLink to="/signin" onClick={() => setIsOpen(false)}>
                   <button className="bg-orange-500 text-white px-5 py-2.5 rounded-xl font-medium">
                     Sign In
                   </button>
-                </Link>
+                </NavLink>
 
-                <Link to="/signup" onClick={() => setIsOpen(false)}>
+                <NavLink to="/signup" onClick={() => setIsOpen(false)}>
                   <button className="px-5 bg-green-500 py-2.5 text-white rounded-xl font-medium">
                     Sign Up
                   </button>
-                </Link>
+                </NavLink>
               </div>
             </Motion.div>
           )}
