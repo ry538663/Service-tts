@@ -2,6 +2,7 @@ import React from "react";
 import logo1 from "../assets/RatingImage/logo1.svg";
 import logo2 from "../assets/RatingImage/logo2.svg";
 import logo3 from "../assets/RatingImage/logo3.svg";
+import { Quote } from "lucide-react";
 
 
 export default function ClientSatisfaction() {
@@ -43,7 +44,7 @@ export default function ClientSatisfaction() {
         <div className="grid md:grid-cols-3 gap-6 text-left">
           {/* Card 1 */}
           <div className="bg-white shadow-sm border rounded-md p-6">
-            <p className="text-blue-500 text-2xl mb-2">“</p>
+            <Quote size={25} strokeWidth={2} className="text-blue-600 mb-2"  />
             <p className="text-gray-600 text-sm leading-relaxed">
               We’ve been working with TriUnity Tech for quite some time now, and the experience has been outstanding. Their developers consistently deliver high-quality work, communicate effectively, and integrate seamlessly with our team.
             </p>
@@ -61,7 +62,7 @@ export default function ClientSatisfaction() {
 
           {/* Card 2 */}
           <div className="bg-white shadow-sm border rounded-md p-6">
-            <p className="text-blue-500 text-2xl mb-2">“</p>
+            <Quote size={25} strokeWidth={2} className="text-blue-600 mb-2"  />
             <p className="text-gray-600 text-sm leading-relaxed">
               TriUnity Tech understood our requirements clearly and delivered a complete solution exactly as promised. Their ability to execute quickly and efficiently, combined with strong communication and technical expertise, truly impressed us.            </p>
             <p className="text-yellow-400 mt-4">★★★★★</p>
@@ -81,7 +82,7 @@ export default function ClientSatisfaction() {
 
           {/* Card 3 */}
           <div className="bg-white shadow-sm border rounded-md p-6">
-            <p className="text-blue-500 text-2xl mb-2">“</p>
+            <Quote size={25} strokeWidth={2} className="text-blue-600 mb-2"  />
             <p className="text-gray-600 text-sm leading-relaxed">
               Working with TriUnity Tech was effortless. We shared our idea, and they turned it into a fully functional product with great attention to detail and a strong focus on quality, ensuring everything was delivered exactly as expected.     </p>
             <p className="text-yellow-400 mt-4">★★★★★</p>
