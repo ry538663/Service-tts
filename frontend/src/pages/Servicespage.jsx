@@ -76,7 +76,7 @@ const ServicesPage = () => {
                                 {service.desc}
                             </p>
                             <button onClick={() => navigate(`/service/${service.slug}`)} className="mt-4 px-4 py-2 bg-green-500 text-white rounded-lg text-sm font-medium shadow-md hover:bg-green-600 transition">
-                                Get Started
+                                Learn More
                             </button>
                         </Motion.div>
                     ))}

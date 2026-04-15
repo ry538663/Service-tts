@@ -68,7 +68,7 @@ const Hero = () => {
             className="mt-6 cursor-pointer px-6 py-3 rounded-full bg-indigo-500 text-white font-medium shadow-md 
   hover:shadow-lg transform transition duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto"
           >
-            Get Started
+            Explore Our Services
           </button>
         </Motion.div>
 
