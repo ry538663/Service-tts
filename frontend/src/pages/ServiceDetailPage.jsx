@@ -106,9 +106,14 @@ const ServiceDetail = () => {
 
             {/* BUTTONS */}
             <motion.div variants={fadeUp} className="mt-12 flex gap-4 flex-wrap">
-              <button className="px-8 py-4 bg-green-500 text-white rounded-2xl shadow-lg hover:bg-green-600 transition">
+              <a
+                href="https://forms.gle/hkaXfDvSnStoC1xr9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-4 bg-green-500 text-white rounded-2xl shadow-lg hover:bg-green-600 "
+              >
                 Get Started
-              </button>
+              </a>
 
               <button
                 onClick={() => navigate("/contact")}
@@ -126,7 +131,7 @@ const ServiceDetail = () => {
           >
 
             <div className="relative    bg-white p-6 rounded-3xl shadow-xl group">
-              <img 
+              <img
                 src={service.image}
                 alt={service.title}
                 className="rounded-2xl h-[600px]  transform scale-105 transition duration-500"
@@ -135,9 +140,9 @@ const ServiceDetail = () => {
           </motion.div>
         </motion.div>
 
-        <Stats/>
-        <FAQSection/>
-        
+        <Stats />
+        <FAQSection />
+
       </div>
 
       <Footer />

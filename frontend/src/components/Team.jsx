@@ -139,7 +139,7 @@ const Team = () => {
                             {/* CARD 1 */}
                             <div className="w-[220px] bg-white rounded-xl shadow-lg overflow-hidden
         lg:absolute lg:top-[-5%] lg:left-25">
-                                <img src={img1} alt="" className="w-full h-[250px] object-cover" />
+                                <img src={img1} alt="" className="w-full h-[250px] object-cover object-top" />
                                 <div className="p-4 pt-2">
                                     <h4 className="font-semibold">Shobhit Jain </h4>
                                     <p className="text-[12px] text-gray-500">Assistant Technical Manager | DXC Technology</p>
@@ -150,7 +150,7 @@ const Team = () => {
                             {/* CARD 2 */}
                             <div className="w-[220px] bg-white rounded-xl shadow-lg overflow-hidden
         lg:absolute lg:top-20 lg:left-85">
-                                <img src={img2} alt="" className="w-full h-[270px] object-cover" />
+                                <img src={img2} alt="" className="w-full h-[270px] object-cover object-top" />
                                 <div className="p-4 pt-2">
                                     <h4 className="font-semibold">Abhinesh Yadav</h4>
                                     <p className="text-[12px] text-gray-500">Cloud Computing Manager | TCS</p>
@@ -164,8 +164,8 @@ const Team = () => {
         md:col-span-2 md:justify-self-center
         lg:absolute lg:bottom-[-5%] lg:left-20
     ">
-                                <img src={img3} alt="" className="w-full h-[250px] object-cover" />
-                                <div className="p-4">
+                                <img src={img3} alt="" className="w-full h-[250px] object-cover object-top" />
+                                <div className="p-4 pt-2">
                                     <h4 className="font-semibold">Chandresh Yadav</h4>
                                     <p className="text-[12px] text-gray-500">Power BI Manager | TCS</p>
                                     <p className="text-[12px] text-gray-500">12+ years experience in Power BI & Analytics</p>
