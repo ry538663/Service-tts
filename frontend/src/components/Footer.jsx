@@ -1,8 +1,25 @@
 import React from "react";
 import TTS1 from "../assets/TTS1.png";
+import { NavLink } from "react-router-dom";
 import { FaLinkedinIn, FaFacebookF, FaInstagram } from "react-icons/fa";
 
+
 const Footer = () => {
+
+  const servicesLinks = [
+    { name: "All Services", path: "/services" },
+    { name: "Website Services", path: "/service/website-services" },
+    { name: "App Services", path: "/service/app-services" },
+    { name: "AI & ML Services", path: "/service/ai-machine-learning" },
+    { name: "Content Writing", path: "/service/content-writing" },
+  ];
+  const pageLinks = [
+    { name: "Home Page", path: "/" },
+    { name: "Services Page", path: "/services" },
+    { name: "About Us Page", path: "/about" },
+    { name: "Careers Page", path: "/careers" },
+    { name: "Contact Page", path: "/contact" },
+  ];
   return (
     <footer className="bg-[#1E2F6E] text-white px-6 md:px-16 py-14">
 
@@ -18,7 +35,7 @@ const Footer = () => {
           />
 
           <p className="text-sm text-white/80 leading-relaxed">
-            TriUnity Tech helps businesses turn ideas into powerful digital solutions,
+            TriUnity Tech Solutions helps businesses turn ideas into powerful digital solutions,
             including web, mobile, and AI-driven applications.
           </p>
         </div>
@@ -29,19 +46,26 @@ const Footer = () => {
             Quick Links
           </h3>
 
-          <ul className="space-y-2 md:ml-10 ml-0  text-sm text-white/80">
-            {[
-              "Home Page",
-              "Services Page",
-              "About Us Page",
-              "Careers Page",
-              "Contact Page",
-            ].map((item, index) => (
+          <ul className="space-y-2 md:ml-10 ml-0 text-sm text-white/80">
+            {pageLinks.map((item, index) => (
               <li key={index} className="relative w-fit cursor-pointer group">
-                <span className="group-hover:text-white transition duration-300">
-                  {item}
-                </span>
-                <span className="absolute left-0 -bottom-1 w-0 h-[0.5px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                <NavLink to={item.path}>
+                  {({ isActive }) => (
+                    <>
+                      <span
+                        className={`transition duration-300 ${isActive ? "text-white" : "group-hover:text-white"
+                          }`}
+                      >
+                        {item.name}
+                      </span>
+
+                      <span
+                        className={`absolute left-0 -bottom-1 h-[0.5px] bg-white transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                          }`}
+                      ></span>
+                    </>
+                  )}
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -54,19 +78,25 @@ const Footer = () => {
           </h3>
 
           <ul className="space-y-2 text-sm text-white/80">
-            {[
-              "Full Stack Development",
-              "Android App Development",
-              "Shopify Development",
-              "AI & Machine Learning",
-              "Frontend Development",
-              "Backend Development",
-            ].map((item, index) => (
+            {servicesLinks.map((item, index) => (
               <li key={index} className="relative w-fit cursor-pointer group">
-                <span className="group-hover:text-white transition duration-300">
-                  {item}
-                </span>
-                <span className="absolute left-0 -bottom-1 w-0 h-[0.5px] bg-white transition-all duration-300 group-hover:w-full"></span>
+                <NavLink to={item.path}>
+                  {({ isActive }) => (
+                    <>
+                      <span
+                        className={`transition duration-300 ${isActive ? "text-white" : "group-hover:text-white"
+                          }`}
+                      >
+                        {item.name}
+                      </span>
+
+                      <span
+                        className={`absolute left-0 -bottom-1 h-[0.5px] bg-white transition-all duration-300 ${isActive ? "w-full" : "w-0 group-hover:w-full"
+                          }`}
+                      ></span>
+                    </>
+                  )}
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -78,19 +108,37 @@ const Footer = () => {
             Our Policies
           </h3>
 
-          <ul className="space-y-2 text-sm text-white/80">
+          <ul className="space-y-2 text-sm">
             {[
-              "Privacy Policy",
-              "Terms & Conditions",
-              "Refund Policy",
-              "Shipping & Delivery Policy",
-              "Cancellation Policy",
+              { name: "Privacy Policy", slug: "privacy-policy" },
+              { name: "Refund Policy", slug: "refund-policy" },
+              { name: "Delivery Policy", slug: "shipping-policy" },
+              { name: "Cancellation Policy", slug: "cancellation-policy" },
+              { name: "Terms & Conditions", slug: "terms-and-conditions" },
             ].map((item, index) => (
-              <li key={index} className="relative w-fit cursor-pointer group">
-                <span className="group-hover:text-white transition duration-300">
-                  {item}
-                </span>
-                <span className="absolute left-0 -bottom-1 w-0 h-[0.5px] bg-white transition-all duration-300 group-hover:w-full"></span>
+              <li key={index} className="w-fit">
+                <NavLink
+                  to={`/policies/${item.slug}`}
+                  className={({ isActive }) =>
+                    `relative inline-block transition duration-300 ${isActive ? "text-white font-semibold" : "text-white/80"
+                    }`
+                  }
+                >
+                  {({ isActive }) => (
+                    <>
+                      {item.name}
+
+                      {/* underline */}
+                      <span
+                        className={`absolute left-0 -bottom-1 h-[0.5px] bg-white transition-all duration-300
+                ${isActive
+                            ? "w-full"
+                            : "w-0 group-hover:w-full"
+                          }`}
+                      ></span>
+                    </>
+                  )}
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -152,7 +200,7 @@ const Footer = () => {
 
       {/* Bottom Links */}
       <div className="text-center text-sm text-white/70 mt-8 border-t border-white/20 pt-6">
-        © 2026 TriUnity Tech. All rights reserved. &nbsp; | &nbsp;
+        © 2026 TriUnity Tech Solutions. All rights reserved. &nbsp; | &nbsp;
         <span className="hover:text-white cursor-pointer">Privacy Policy</span>
         &nbsp; | &nbsp;
         <span className="hover:text-white cursor-pointer">Terms & Conditions</span>

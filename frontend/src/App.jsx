@@ -7,11 +7,16 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 import Servicespage from "./pages/Servicespage"; // Import the Services page
 import ServiceDetail from "./pages/ServiceDetailPage";
+import ScrollToTop from "./components/ScrollToTop";
+import Careers from "./pages/CareerPage";
+import About from "./pages/About";
+import PolicyPage from "./pages/Policies";
 
 function App() {
   return (
     <AuthProvider> {/* ✅ Wrap everything */}
       <BrowserRouter>
+      <ScrollToTop/>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
@@ -19,6 +24,9 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/services" element={<Servicespage />} />
           <Route path="/service/:slug" element={<ServiceDetail/>} />
+          <Route path="/careers" element={<Careers/>} />
+          <Route path="/about" element={<About/>} />
+          <Route path="/policies/:slug" element={<PolicyPage/>} /> 
            {/* Add this line */}
         </Routes>
       </BrowserRouter>

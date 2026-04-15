@@ -1,73 +1,20 @@
-import React , { useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import React from "react";
+import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Steps from "../components/Steps";
 import Faq from "../components/Faq";
 import { motion as Motion } from "framer-motion";
-import bgImage from "../assets/download.png"; // ✅ add your image here
+import bgImage from "../assets/download.png";
 import { services } from "../data/servicesData";
 import Stats from "../components/Stats";
 
-// const services = [
-//     {
-//         title: "Full Stack Development",
-//         desc: "Complete web solutions including frontend, backend, and database integration tailored to your business needs.",
-//     },
-//     {
-//         title: "Android App Development",
-//         desc: "High-performance mobile applications built with modern technologies for smooth user experience.",
-//     },
-//     {
-//         title: "Shopify Development",
-//         desc: "Custom Shopify stores with optimized design, performance, and conversion-focused features.",
-//     },
-//     {
-//         title: "AI & Machine Learning",
-//         desc: "Smart solutions using AI and ML to automate processes and enhance decision-making.",
-//     },
-//     {
-//         title: "Frontend Development",
-//         desc: "Responsive, modern UI built with React and latest technologies for better user engagement.",
-//     },
-//     {
-//         title: "Backend Development",
-//         desc: "Secure and scalable backend systems with APIs, authentication, and database handling.",
-//     },
-//     {
-//         title: "WordPress Development",
-//         desc: "Custom WordPress websites with easy management and SEO-friendly structure.",
-//     },
-//     {
-//         title: "UI/UX Design",
-//         desc: "User-focused designs that enhance usability, engagement, and overall experience.",
-//     },
-//     {
-//         title: "Content Writing",
-//         desc: "Creative and engaging content tailored for branding, marketing, and audience growth.",
-//     },
-//     {
-//         title: "API Development & Integration",
-//         desc: "Robust and secure API solutions to connect systems, enable seamless data flow, and enhance application functionality.",
-//     },
-//     {
-//         title: "Cloud & Firebase Services",
-//         desc: "Scalable cloud solutions using Firebase and modern cloud platforms for hosting, real-time data, and performance optimization.",
-//     },
-//     {
-//         title: "SEO Optimization",
-//         desc: "Improve your website’s visibility with advanced SEO strategies, keyword optimization, and performance enhancements.",
-//     },
-// ];
 
 const ServicesPage = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-    const { slug } = useParams();
+
     const navigate = useNavigate();
     return (
-        <div className="bg-white min-h-screen ">
+        <div className="bg-white pt-24 min-h-screen ">
 
             {/* Navbar */}
             <Navbar />
@@ -137,7 +84,7 @@ const ServicesPage = () => {
                 </div>
             </div>
             <Steps />
-            
+
             <Faq />
 
             {/* CTA Section */}
@@ -148,9 +95,14 @@ const ServicesPage = () => {
                 <p className="mb-6 ">
                     Let’s build something amazing together.
                 </p>
-                <button className="bg-green-500 text-white px-6 py-3 rounded-xl font-medium hover:bg-green-600 transition">
+                <a
+                    href="https://forms.gle/hkaXfDvSnStoC1xr9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block bg-green-500 text-white px-6 py-3 rounded-xl font-medium hover:bg-green-600 transition"
+                >
                     Get Started
-                </button>
+                </a>
             </div>
 
             {/* Footer */}

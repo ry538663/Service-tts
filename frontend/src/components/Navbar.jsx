@@ -4,9 +4,13 @@ import { Menu, X } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/TTS1.png";
 import { AnimatePresence } from "framer-motion";
+import { useEffect } from "react";
+
+let lastScrollY = window.scrollY;
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showNav, setShowNav] = useState(true);
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -16,12 +20,35 @@ const Navbar = () => {
     { name: "About", path: "/about" },
   ];
 
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > lastScrollY) {
+        // scrolling DOWN
+        setShowNav(false);
+      } else {
+        // scrolling UP
+        setShowNav(true);
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Motion.nav
       initial={{ opacity: 0, y: -20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="w-full flex justify-center mt-6 px-4"
+      animate={{
+        opacity: 1,
+        y: showNav ? 0 : -100
+      }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
+      className="w-full flex justify-center mt-6 px-4 fixed top-0 left-0 z-50"
     >
       <div className="w-full max-w-6xl relative">
 

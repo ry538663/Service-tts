@@ -11,9 +11,8 @@ import Stats from "../components/Stats";
 import FAQSection from "../components/Faq";
 
 const ServiceDetail = () => {
-  useEffect(() => {
-  window.scrollTo(0, 0);
-}, []);
+
+
   const { slug } = useParams();
   const navigate = useNavigate();
 
@@ -38,7 +37,7 @@ const ServiceDetail = () => {
     return (
       <>
         <Navbar />
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 px-6 text-center">
+        <div className="flex flex-col pt-24 items-center justify-center min-h-screen bg-gray-50 px-6 text-center">
           <h2 className="text-3xl font-bold text-gray-900">Service Not Found</h2>
           <p className="text-gray-500 mt-4">
             The service you're looking for doesn't exist.
@@ -59,7 +58,7 @@ const ServiceDetail = () => {
     <>
       <Navbar />
 
-      <div className="w-full bg-gray-50 min-h-screen pt-20  mx-auto max-w-6xl">
+      <div className="w-full  bg-gray-50 min-h-screen pt-40  mx-auto max-w-6xl">
 
         {/* HERO SECTION */}
         <motion.div

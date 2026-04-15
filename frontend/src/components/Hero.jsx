@@ -5,10 +5,12 @@ import img2 from "../assets/hero2.jpeg";
 import img3 from "../assets/hero3.jpeg";
 import img4 from "../assets/hero4.png";
 import img5 from "../assets/hero5.png";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
   return (
-    <div className="w-full h-fit sm:mt-20 mt-8 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="w-full pt-24 h-fit sm:mt-20 mt-8 flex items-center justify-center px-4 sm:px-6 lg:px-8">
 
       <div className="w-full max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-1">
 
@@ -61,8 +63,12 @@ const Hero = () => {
             We help businesses build websites, apps, and custom solutions. Share your project with us and we’ll handle everything from start to finish - delivering fast, scalable, and reliable results without the hassle.
           </p>
 
-          <button className="mt-6 px-6 py-3 rounded-full bg-indigo-500 text-white font-medium shadow-md hover:shadow-lg transition w-full sm:w-auto">
-            Get Started 
+          <button
+            onClick={() => navigate("/services")}
+            className="mt-6 cursor-pointer px-6 py-3 rounded-full bg-indigo-500 text-white font-medium shadow-md 
+  hover:shadow-lg transform transition duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto"
+          >
+            Get Started
           </button>
         </Motion.div>
 

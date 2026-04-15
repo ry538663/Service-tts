@@ -8,9 +8,7 @@ import { db } from "../firebase";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 
 const Contact = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -46,7 +44,7 @@ const Contact = () => {
 
         <div className="bg-green-50 min-h-screen">
             <Navbar />
-            <div className="min-h-screen bg-green-50 pt-20 pb-20 px-6 overflow-hidden">
+            <div className="min-h-screen pt-40 bg-green-50 pt-20 pb-20 px-6 overflow-hidden">
                 <div className="max-w-7xl mx-auto">
 
                     {/* HEADING */}
