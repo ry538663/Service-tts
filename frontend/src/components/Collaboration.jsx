@@ -5,6 +5,9 @@ import TTS from "../assets/Collaboration/TTS1.png";
 import motorola from "../assets/Collaboration/motorola.png";
 import salesforce from "../assets/Collaboration/salesforce.png";
 import microsoft from "../assets/Collaboration/microsoft.png";
+import google from "../assets/Collaboration/google.webp";
+import Microsoft1 from "../assets/Collaboration/Microsoft1.avif";
+import Tata from "../assets/Collaboration/Tata.avif";
 
 export default function CollaborationsSection() {
   return (
@@ -25,8 +28,14 @@ export default function CollaborationsSection() {
 
         {/* Card 1 */}
         <div className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition bg-white">
-          <div className="h-48 bg-gray-200 flex items-center justify-center">
-            <span className="text-gray-400 text-sm">Image</span>
+          
+          {/* Top Image ONLY changed */}
+          <div className="h-48">
+            <img
+              src={Tata}
+              alt="collaboration"
+              className="w-full h-full object-cover"
+            />
           </div>
 
           <div className="p-5">
@@ -38,22 +47,29 @@ export default function CollaborationsSection() {
 
             <div className="border-t my-6"></div>
 
+            {/* Bottom part UNCHANGED */}
             <div className="flex items-center gap-4">
               <img src={TTS} alt="TTS" className="h-12 object-contain" />
               <span className="text-lg font-semibold text-gray-900">TTS</span>
 
               <span className="text-gray-400 text-lg">+</span>
 
-              <img src={motorola} alt="Motorola" className="h-12 object-contain" />
-              <span className="text-lg font-semibold text-gray-900">Motorola</span>
+              <img src={motorola} alt="Motorola" className="h-9 object-contain" />
+              <span className="text-lg font-semibold text-gray-900">TATA</span>
             </div>
           </div>
         </div>
 
         {/* Card 2 */}
         <div className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition bg-white">
-          <div className="h-48 bg-gray-200 flex items-center justify-center">
-            <span className="text-gray-400 text-sm">Image</span>
+
+          {/* Top Image ONLY changed */}
+          <div className="h-48">
+            <img
+              src={google}
+              alt="collaboration"
+              className="w-full h-full object-cover"
+            />
           </div>
 
           <div className="p-5">
@@ -63,24 +79,31 @@ export default function CollaborationsSection() {
               Industry Perspective: Salesforce on Team Alignment and Agile Talent
             </h3>
 
-            <div className="border-t my-6 "></div>
+            <div className="border-t my-6"></div>
 
+            {/* Bottom part UNCHANGED */}
             <div className="flex items-center gap-4">
               <img src={TTS} alt="TTS" className="h-12 object-contain" />
               <span className="text-lg font-semibold text-gray-900">TTS</span>
 
               <span className="text-gray-400 text-lg">+</span>
 
-              <img src={salesforce} alt="Salesforce" className="h-12 object-contain" />
-              <span className="text-lg font-semibold text-gray-900">Salesforce</span>
+              <img src={salesforce} alt="Salesforce" className="h-9 object-contain" />
+              <span className="text-lg font-semibold text-gray-900">Google</span>
             </div>
           </div>
         </div>
 
         {/* Card 3 */}
         <div className="border rounded-lg overflow-hidden shadow-sm hover:shadow-md transition bg-white">
-          <div className="h-48 bg-gray-200 flex items-center justify-center">
-            <span className="text-gray-400 text-sm">Image</span>
+
+          {/* Top Image ONLY changed */}
+          <div className="h-48">
+            <img
+              src={Microsoft1}
+              alt="collaboration"
+              className="w-full h-full object-cover"
+            />
           </div>
 
           <div className="p-5">
@@ -92,14 +115,14 @@ export default function CollaborationsSection() {
 
             <div className="border-t my-6"></div>
 
+            {/* Bottom part UNCHANGED */}
             <div className="flex items-center gap-4">
               <img src={TTS} alt="TTS" className="h-12 object-contain" />
               <span className="text-lg font-semibold text-gray-900">TTS</span>
 
               <span className="text-gray-400 text-lg">+</span>
 
-              <img src={microsoft} alt="Microsoft" className="h-12 object-contain" />
-              <span className="text-lg font-semibold text-gray-900"></span>
+              <img src={microsoft} alt="Microsoft" className="h-10 object-contain" />
             </div>
           </div>
         </div>

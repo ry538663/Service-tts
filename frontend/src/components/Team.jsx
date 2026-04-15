@@ -4,9 +4,9 @@ import person1 from "../assets/TeamIcons/Green1.png";
 import person2 from "../assets/TeamIcons/Green2.png";
 import person3 from "../assets/TeamIcons/Green3.png";
 import person4 from "../assets/TeamIcons/Green4.png";
-import img1 from "../assets/TeamIcons/download.jpeg";
-import img2 from "../assets/TeamIcons/download (1).jpeg";
-import img3 from "../assets/TeamIcons/download (2).jpeg";
+import img1 from "../assets/TeamIcons/download.png";
+import img2 from "../assets/TeamIcons/download (1).png";
+import img3 from "../assets/TeamIcons/download (2).png";
 
 const Team = () => {
     const [activeSlide, setActiveSlide] = useState(0);
@@ -138,11 +138,12 @@ const Team = () => {
 
                             {/* CARD 1 */}
                             <div className="w-[220px] bg-white rounded-xl shadow-lg overflow-hidden
-        lg:absolute lg:top-0 lg:left-25">
+        lg:absolute lg:top-[-5%] lg:left-25">
                                 <img src={img1} alt="" className="w-full h-[250px] object-cover" />
-                                <div className="p-4">
-                                    <h4 className="font-semibold">Ning Xu</h4>
-                                    <p className="text-sm text-gray-500">Product Designer</p>
+                                <div className="p-4 pt-2">
+                                    <h4 className="font-semibold">Shobhit Jain </h4>
+                                    <p className="text-[12px] text-gray-500">Assistant Technical Manager | DXC Technology</p>
+                                    <p className="text-[12px] text-gray-500">11+ years experience in technical management</p>
                                 </div>
                             </div>
 
@@ -150,9 +151,10 @@ const Team = () => {
                             <div className="w-[220px] bg-white rounded-xl shadow-lg overflow-hidden
         lg:absolute lg:top-20 lg:left-85">
                                 <img src={img2} alt="" className="w-full h-[270px] object-cover" />
-                                <div className="p-4">
-                                    <h4 className="font-semibold">Jacqueline</h4>
-                                    <p className="text-sm text-gray-500">Consultant</p>
+                                <div className="p-4 pt-2">
+                                    <h4 className="font-semibold">Abhinesh Yadav</h4>
+                                    <p className="text-[12px] text-gray-500">Cloud Computing Manager | TCS</p>
+                                    <p className="text-[12px] text-gray-500">9+ years of experience in Cloud & Data Solutions</p>
                                 </div>
                             </div>
 
@@ -160,12 +162,13 @@ const Team = () => {
                             <div className="
         w-[220px] bg-white rounded-xl shadow-lg overflow-hidden
         md:col-span-2 md:justify-self-center
-        lg:absolute lg:bottom-0 lg:left-20
+        lg:absolute lg:bottom-[-5%] lg:left-20
     ">
                                 <img src={img3} alt="" className="w-full h-[250px] object-cover" />
                                 <div className="p-4">
-                                    <h4 className="font-semibold">Mohab Ayman</h4>
-                                    <p className="text-sm text-gray-500">AI Developer</p>
+                                    <h4 className="font-semibold">Chandresh Yadav</h4>
+                                    <p className="text-[12px] text-gray-500">Power BI Manager | TCS</p>
+                                    <p className="text-[12px] text-gray-500">12+ years experience in Power BI & Analytics</p>
                                 </div>
                             </div>
 
